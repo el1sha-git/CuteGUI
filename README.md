@@ -25,5 +25,5 @@ Awesome c++ framework for desktop applications
 >>> screens
 
 > bin
->> <AppName-debug>
->> <Apssname-release>
+>> AppName-debug
+>> Apssname-release
