@@ -1,0 +1,21 @@
+<template>
+ <p class="cuteGui">Html code here. Support all tags</p>
+ <button on-click="changeTxt("hello")">Change</button>
+</template>
+
+<style>
+.cuteGui{
+    color: red;
+}
+</style>
+
+// c++ code here
+<logic>
+// document is default object of class Document contain content with styles
+#include<string>
+
+void changeTxt(string str){
+    document.cuteGui.text = str
+}
+
+</logic>

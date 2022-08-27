@@ -1,0 +1,60 @@
+!!!Хеш пароля является паролем к бд, хэш файла нужен для подтвверждения правильности расшифровки
+#Структура файла
+
+#Non ecrypted
+124 - длина заголовка не влючая это число(4 byte)
+1 - версия safekeeper(4 byte)
+8486a10c4393cee1c25392769ddd3b2d6c242d6ec73228e1414efff7dfb2f07ef - хэш файла(64 byte)
+203 - длина блоков(8 byte)
+
+#Encrypted section
+XML version
+<passwords id="passwords" title="Passwords" icon="path/to/icon">
+  <record id="0">
+    <title name="hello">Mail</title>
+    <password>Password</password>
+    <website>https://safekeeper.org</website>
+    <timeupdated>05.23.2022:12.05.59(datetimeformat)</timeupdated>
+  </record>
+</passwords>
+<notes id="notes" title="Notes" icon="path/to/icon">
+  <record id="0">
+    <title>Mail</title>
+    <text>Text amogusa</text>
+    <timeupdated>05.23.2022:12.05.59(datetimeformat)</timeupdated>
+  </record>
+</notes>
+<calendar id="calendar" title="Calendar" icon="path/to/icon">
+  <record id="0">
+    <title>Event</title>
+    <text>Event text</text>
+    <timeevent>05.23.2022:12.05.59(datetimeformat)</timeevent>
+    <timealert>05.23.2022:12.05.59(datetimeformat)</timealert>
+    <timeupdated>05.23.2022:12.05.59(datetimeformat)</timeupdated>
+  </record>
+</calendar>
+
+
+Json version
+[
+  {
+    "title":{
+        "name": "Passwords",
+        "icon": "None"
+    },
+    "records":[
+        {
+          "id": 0,
+          "name": "Mail",
+          "password": "password",
+          "link": "https://mail.com"
+        },
+        {
+          "id": 1,
+          "name": "Mail2",
+          "password": "password2",
+          "link": "https://mail.com2"
+        }
+      ]
+  }
+]
