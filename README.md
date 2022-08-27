@@ -1,7 +1,7 @@
 # CuteGUI
 Awesome c++ framework for desktop applications
 
-# CuteGUI Structure
+## CuteGUI Structure
 > CmakeLists.txt
 
 > AppName
