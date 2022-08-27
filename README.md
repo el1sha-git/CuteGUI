@@ -13,11 +13,19 @@ Awesome c++ framework for desktop applications
   
   
 >> src
+
 >>> assets
+
 >>> components
+
 >>> routes
+
 >>> store
+
 >>> screens
+
 > bin
+
 >> <AppName-debug>
+
 >> <Apssname-release>
