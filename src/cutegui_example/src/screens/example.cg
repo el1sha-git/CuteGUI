@@ -1,0 +1,16 @@
+<template>
+    <p> Hello world!</p>
+    <p>Hello {{ name }}</p>
+</template>
+
+<style lang="css">
+p{
+    color: red;
+}
+</style>
+
+<logic>
+#include <string>
+
+std::string name = "Danik";
+</logic>
