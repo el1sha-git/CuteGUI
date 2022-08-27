@@ -3,9 +3,17 @@ Awesome c++ framework for desktop applications
 
 # CuteGUI Structure
 > CmakeLists.txt
+
+
 > <AppName>
+  
+  
 >> index.cpp
+  
+  
 >> dependecies
+  
+  
 >> src
 >>> assets
 >>> components
