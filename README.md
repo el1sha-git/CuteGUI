@@ -4,9 +4,7 @@ Awesome c++ framework for desktop applications
 # CuteGUI Structure
 > CmakeLists.txt
 
-
-> <AppName>
-  
+> AppName
   
 >> index.cpp
   
