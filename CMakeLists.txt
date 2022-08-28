@@ -15,7 +15,8 @@ find_package(glfw3 REQUIRED)
 target_link_libraries(CuteGUI glfw3)
 
 add_library(parser SHARED
-        src/parser/pugiparser.cpp
+        src/parser/src/parser.cpp
+        src/parser/src/pugixml.cpp
         )
 
 add_executable(Parser
