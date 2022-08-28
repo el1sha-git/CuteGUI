@@ -1,0 +1,8 @@
+title = "CuteGUI Example"
+root = "../"
+
+[dev-dependencies]
+debugger = "0.0.1"
+
+[dependecies]
+db = "0.0.2"
