@@ -1,6 +1,7 @@
 <template>
-    <p> Hello world!</p>
-    <p>Hello {{ name }}</p>
+    <navbar></navbar> <!-- that custom tag from import -->
+    <p>Hello world!</p>
+    <p>Hello{{ name }}</p>
 </template>
 
 <style lang="css">
@@ -10,6 +11,8 @@ p{
 </style>
 
 <logic>
+import "navbar" from "@components/navbar.cg" // Not cpp logic!!!
+
 #include <string>
 
 std::string name = "Danik";
