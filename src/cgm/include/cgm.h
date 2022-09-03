@@ -18,7 +18,7 @@ public:
 
     };
 
-    std::string parseStateDescription(int state){
+    static std::string parseStateDescription(int state){
         std::string state_decriptions[] ={
                 "No Error",
                 "Invalid Command",
@@ -32,6 +32,8 @@ public:
 
     int parseCommand(int argc, char *argv[]);
 
+
+    /// Dev funcs
     void printcCommand(){
         std::cout << this->command << std::endl;
     }
@@ -66,5 +68,6 @@ private:
         INVALID_ARGUMENT,
     };
 };
+
 
 #endif //CUTEGUI_CGM_H

@@ -30,8 +30,9 @@ int cgm::parseCommand(int argc, char *argv[]) {
 }
 
 int cgm::startProject(std::string name){
+    std::filesystem::path current = std::filesystem::current_path()
     std::cout << name << std::endl;
-    std::cout << std::filesystem::current_path() << std::endl;
+    std::cout << current << std::endl;
     std::cout << std::filesystem::create_directory(name) << std::endl;
     std::cout << std::filesystem::create_directory(name+"/app") << std::endl;
 
