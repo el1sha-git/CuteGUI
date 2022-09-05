@@ -8,17 +8,43 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <map>
+#include <cassert>
 
-class cgm{
-public:
-    cgm(){
 
+
+namespace cgm{
+
+    std::string command;
+    std::vector<std::string> arguments;
+    std::vector<std::string> flags;
+
+    std::map<std::string, int(*)()> commands_map;
+    enum parseStates{
+        SUCCESS,
+        INVALID_COMMAND,
+        INVALID_FLAG,
+        INVALID_ARGUMENT,
     };
-    ~cgm(){
+    int install();
 
-    };
+    int uninstall();
 
-    static std::string parseStateDescription(int state){
+    int lock();
+
+    int sync();
+
+    int startProject();
+
+
+
+
+    void init_command_map(){
+        commands_map.insert(std::pair<std::string, int(*)()>("install", install));
+        commands_map.insert(std::pair<std::string, int(*)()>("startproject", startProject));
+    }
+
+    std::string parseStateDescription(int state){
         std::string state_decriptions[] ={
                 "No Error",
                 "Invalid Command",
@@ -28,45 +54,32 @@ public:
         return state_decriptions[state];
     }
 
-    int startProject(std::string name);
 
     int parseCommand(int argc, char *argv[]);
+
+    int execCommand();
 
 
     /// Dev funcs
     void printcCommand(){
-        std::cout << this->command << std::endl;
+        std::cout << command << std::endl;
     }
 
     void printArguments(){
-        for(int i = 0; i < this->arguments.size(); ++i){
-            std::cout << this->arguments[i] << std::endl;
+        for(auto & argument : arguments){
+            std::cout << argument << std::endl;
         }
     }
     void printFlags(){
-        for(int i = 0; i < this->flags.size(); ++i){
-            std::cout << this->flags[i] << std::endl;
+        for(auto & flag : flags){
+            std::cout << flag << std::endl;
         }
     }
 
-    int install();
 
-    int uninstall();
 
-    int lock();
 
-    int sync();
-private:
-    std::string command;
-    std::vector<std::string> arguments;
-    std::vector<std::string> flags;
 
-    enum parseStates{
-        SUCCESS,
-        INVALID_COMMAND,
-        INVALID_FLAG,
-        INVALID_ARGUMENT,
-    };
 };
 
 

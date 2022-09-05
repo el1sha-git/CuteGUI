@@ -7,5 +7,6 @@
 #include <string>
 
 std::string PROJECTS_LIST_FILE = "./config/config.toml";
+std::string PROJECT_BASE_TEMPLATE_PATH = "/home/el1sha/Projects/CuteGUI/src/cgm/mics/example";
 
 #endif //CUTEGUI_CONFIG_H

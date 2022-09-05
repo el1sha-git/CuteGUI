@@ -1,19 +1,20 @@
 #include <iostream>
-#include "include/cgm.h"
 using namespace std;
+#include "include/cgm.h"
 
 
 int main(int argc, char *argv[]){
-    cgm a;
     cout << "Argc: " << argc << endl;
-    int state = a.parseCommand(argc, argv);
+    int state = cgm::parseCommand(argc, argv);
     cout << "Command: ";
-    a.printcCommand();
+    cgm::printcCommand();
     cout << "Arguments: ";
-    a.printArguments();
+    cgm::printArguments();
     cout << "Flags: ";
-    a.printFlags();
+    cgm::printFlags();
+    cgm::execCommand();
 
     cout << cgm::parseStateDescription(state) << endl;
+
     return 0;
 }
