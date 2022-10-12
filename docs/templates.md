@@ -8,7 +8,7 @@
 > #### 3. logic
 > > Have logic for this template. Interpreted as c++ code exclude 'import from' derictive!
 
-### Logic secion
+### Logic section
 
 This section contain c++ code. The exception is 'import from' derective. That used to include component to screen.
 
